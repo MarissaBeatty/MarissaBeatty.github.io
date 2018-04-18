@@ -308,5 +308,13 @@ header {
     font-size: 70px;
  }
 
+ .fa-circle {
+   z-index: 5000;
+   -moz-box-shadow: 0;
+   -webkit-box-shadow: 0;
+   box-shadow: 0;
+ }
+}
+
 
 }
