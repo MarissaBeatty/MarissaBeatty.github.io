@@ -34,6 +34,10 @@ header {
       rgba(250, 208, 196, 1),
       rgba(255, 209, 255, 0.5)
       );
+  /*background: linear-gradient(
+    rgba(80, 80, 80, 1),
+    rgba(80, 80, 80, 0.5)
+    );*/
   background-size: cover;
   background-attachment: fixed;
   height: 100vh;
@@ -88,21 +92,47 @@ video.header-video {
 }
 
 /* HOME BUTTON  */
-.fa-circle {
-  display: inline-block;
+
+a#homeButton {
+  display: none;
   font-size: 60px;
   position: fixed;
-  bottom: 10px;
-  right: 10px;
+  bottom: 30px;
+  right: 30px;
   margin: 0;
   padding: 0;
-  color: rgba(250, 208, 196, 0.8);
-  border-radius: 100%;
-  border: 3px solid rgba(255,255,255,0.5);
+  /*color: rgba(250, 208, 196, 0.8);*/
+  color: rgba(80, 80, 80, 0.8);
+  z-index: 6000;
+  animation: bounce 1s infinite alternate;
+  -webkit-animation: bounce 1s infinite alternate;
 }
 
-.fa-circle:hover {
+a#homeButton.visible {
+  display: inline-block;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+}
+@-webkit-keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+}
+
+a#homeButton:hover {
   cursor: pointer;
+  /*color: rgba(250, 208, 196, 1);*/
+  color: rgba(80, 80, 80, 1);
 }
 
 /* LANGUAGE LOGOS SECTION */
@@ -190,7 +220,7 @@ video.header-video {
   grid-row-end: 4;
 }
 
-.aboutImage{
+.aboutImage {
   width: 200px;
   border-radius: 200px;
   grid-column-start: 2;
@@ -207,7 +237,7 @@ video.header-video {
   justify-items: center;
   grid-template-columns: 33.33vw 33.33vw 33.33vw;
   /*grid-template-rows: 200px 300px 300px 300px;*/
-  grid-template-rows: 200px 300px 200px;
+  grid-template-rows: 200px 300px 300px 200px;
   grid-row-gap: 10vh;
   overflow: hidden;
   background-color: #fff;
