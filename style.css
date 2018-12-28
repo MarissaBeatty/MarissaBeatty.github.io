@@ -16,7 +16,8 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 h1 {
-  font-family: 'Montserrat', sans-serif;
+  /*font-family: 'Montserrat', sans-serif;*/
+  font-family: /*Helvetica,*/ sans-serif;
   font-size: 10vw;
   width: 50%;
   margin: 20px 0 20px 50%;
@@ -62,7 +63,8 @@ header {
 }
 
 .inner-header h2 {
-  font-family: 'Roboto', serif;
+  /*font-family: 'Roboto', serif;*/
+  font-family: Helvetica, sans-serif;
   box-sizing: border-box;
   color: rgb(0,128,128);
   width: 50%;
