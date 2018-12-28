@@ -2,7 +2,16 @@
 <html>
 <head>
   <title>Marissa Beatty | Front End Web Developer</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <title>Ben Beatty | Front-end Developer | Montreal</title>
+  <meta name="description" content="Front-end Developer based out of Montreal, Canada.">
+  <meta name="author" content="Ben Beatty">
+  <meta name="keywords" content="Portfolio, Marissa Beatty, Front End Web Developer, Developer, HTML, CSS, JavaScript, Montreal, Quebec, past work, projects, Website">
+  <meta property="og:title" content="Marissa Beatty | Front End Web Developer"/>
+  <meta property="og:url" content="https://beattydev.com/"/>
+  <meta property="og:description" content="Front End Web Developer."/>
   <link href="https://fonts.googleapis.com/css?family=Cutive+Mono|Space+Mono|Montserrat" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="style.css">
   <link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon">
@@ -12,10 +21,11 @@
 <body id="body">
   <header id="header">
     <div class="inner-header">
-    <video class="header-video" poster="imgs/typing.jpg" src="imgs/PexelsVideos3327.mp4" autoplay loop muted>
-    </video>
-      <h1 class="header">Marissa Beatty</h1>
-      <h2 ID="h2">Front End Web Developer</h2>
+    <!-- <video class="header-video" poster="imgs/typing.jpg" src="imgs/PexelsVideos3327.mp4" autoplay loop muted> -->
+    <!-- </video> -->
+    <img class="heroImage" src="imgs/business-computer-desk-1036808.jpg" />
+      <h1 class="header">Marissa <span>Beatty</span></h1>
+      <h2 ID="h2">Front End <span>Web Developer</span></h2>
     </div>
   </header>
   <section class="site-body">
@@ -41,11 +51,6 @@
         </a>
       </div>
       <div class="language">
-        <a href="http://php.net/manual/en/intro-whatis.php" target="blank">
-          <i class="fab fa-php languageLogo"></i>
-        </a>
-      </div>
-      <div class="language">
         <a href="https://angularjs.org/" target="blank">
           <i class="fab fa-angular languageLogo"></i>
         </a>
@@ -59,7 +64,7 @@
     <section class="about">
       <h2>About Me</h2>
       <!-- <div class="aboutWrapper"> -->
-        <p>I am an enthusiastic and motivated Web Developer with strong problem-solving and interpersonal skills. I have worked on responsive apps both independently and collaboratively, using JavaScript (React, Angular, Node, jQuery), mySQL, HTML5 and CSS3.</p>
+        <p>I am an enthusiastic and motivated Web Developer with strong problem-solving and interpersonal skills. I have worked on responsive web apps both independently and collaboratively, using JavaScript (React, Angular, Node, jQuery), mySQL, HTML5 and CSS3.</p>
 
         <p>If you're looking for a hardworking, tenacious and flexible addition to your team, connect with me at beattymarissa@gmail.com.</p>
         <img class="aboutImage" src="imgs/portrait.jpg"/>
@@ -91,6 +96,12 @@
         </a>
         <img class="portfolioProjectThumbnail" src="imgs/pizzaThumbnail.png"/>
       </div>
+      <div class="portfolioProject">
+        <a href="https://marissabeatty.github.io/quizGame/" target="blank">
+          <h3 class="portfolioTitle">JavaScript Quiz</h3>
+        </a>
+        <img class="portfolioProjectThumbnail" src="imgs/quizThumbnail.png"/>
+      </div>
     </section>
     <section class="contact">
       <div></div>
@@ -102,11 +113,12 @@
         <div class="contact-icons">
           <a href="https://github.com/MarissaBeatty" target="_blank"><i class="fab fa-github icon"></i></a>
           <a href="https://www.linkedin.com/in/marissa-beatty/" target="_blank"><i class="fab fa-linkedin icon"></i></a>
-          <a href="https://www.youtube.com/channel/UCsmEPyVmDmeSrXIz0p5uk6w" target="_blank"><i class="fab fa-youtube icon"></i></a>
+         <!--  <a href="https://www.youtube.com/channel/UCsmEPyVmDmeSrXIz0p5uk6w" target="_blank"><i class="fab fa-youtube icon"></i></a> -->
         </div>
     </section>
   <footer>
 
   </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="portfolio.js"></script>
 </body>
