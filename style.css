@@ -116,9 +116,9 @@ nav.sticky {
 #menu-icon {
   display: none;
   color: rgba(80, 80, 80, 0.8);
-  font-size: 3vw;
+  font-size: 2rem;
   margin-top: 3vh;
-  margin-left: 3vw;
+  margin-left: 5vw;
   transform: rotate(0);
   transition: transform 1.5s ease-in-out;
 }
@@ -270,7 +270,7 @@ a#homeButton:hover {
   color: #fff;
   display: grid;
   align-content: center;
-  grid-template-rows: 3px auto 80px 80px;
+  grid-template-rows: 3px auto 200px 20px;
   grid-template-columns: 65% 35%;
   grid-column-gap: 2%;
   /*border-top: 3px solid rgb(0,128,128);*/
@@ -345,6 +345,7 @@ a#homeButton:hover {
 }
 
 .testimonial {
+  box-sizing: border-box;
   font-family: 'Roboto', Helvetica, sans-serif;
   width: 300px;
   min-height: 400px;
@@ -623,7 +624,7 @@ a.contact-me.button:hover,
 
   .contact {
     grid-template-columns: 100vw;
-    grid-template-rows: 20px 80px 0px 0px 80px 80px;
+    grid-template-rows: 20px auto 0px 0px 80px 80px;
   }
 
   .fa-circle {
@@ -633,12 +634,41 @@ a.contact-me.button:hover,
 
 @media (max-width: 639px) {  /*for portfolio projects - separate media query*/
 
-  .portfolio {
-    grid-template-columns: 100vw;
-    grid-template-rows: 150px 300px 300px 300px 300px 300px 50px;
+  #about {
+    grid-template-columns: 100%;
+    grid-template-rows: 3px auto 120px;
   }
 
-  .portfolio h2 {
+  #about img {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    margin: 5vh auto;
+  }
+
+  #about p {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 5;
+    grid-row-end: 6;
+  }
+
+  .portfolio {
+    grid-template-columns: 100vw;
+    grid-template-rows: 150px 300px 300px 300px 300px 300px 300px 50px;
+  }
+  #testimonials {
+  grid-template-columns: 100vw;
+  padding: 50px 0;
+ }
+
+ #testimonials h2 {
+  font-size: 30px;
+ }
+
+  .portfolio h2, 
+  .testimonials h2 {
     grid-column-end: 2;
  }
 
@@ -703,7 +733,8 @@ a.contact-me.button:hover,
   }
 
   .about h2,
-  .portfolio h2 {
+  .portfolio h2, 
+  .testimonials h2 {
     font-size: 50px;
     margin-top:20px;
   }
