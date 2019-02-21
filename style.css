@@ -26,12 +26,30 @@ h1 {
   width: 50%;
   margin: 20px 0 20px 50%;
   text-align: right;
-  line-height: 0.9;color: #fff;
+  line-height: 0.9;
+  color: #fff;
 }
 
 h1 span {
   font-size: 12.65vw;
+}
 
+h2 {
+   font-family: 'Montserrat', sans-serif;
+   font-size: 90px;
+   text-align: center;
+ }
+
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(0,128,128);
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+h4 {
+  color: rgb(0,128,128);
+  transition: color 0.8s ease-in-out;
 }
 
 /* HEADER AREA */
@@ -47,7 +65,7 @@ header {
   width: 100%;
   max-width: 100vw;
   color: #fff;
-  display: grid;
+  display: flex;
   justify-items: center;
   align-items: center;
   overflow: hidden;
@@ -65,7 +83,7 @@ header {
 }
 
 .inner-header {
-  width: 80vw;
+  width: 90vw;
   text-align: right;
 }
 
@@ -92,7 +110,6 @@ header {
 
 nav {
   width: 50%;
-  /*max-width: 50%;*/
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -141,11 +158,6 @@ nav li {
   padding: 5px 1.5vw;
 }
 
-nav.sticky a {
-  /*background-color: #fff;
-  padding: 10px;*/
-}
-
 nav a {
   text-decoration: none;
   font-family: 'Roboto', Helvetica, sans-serif;
@@ -159,7 +171,6 @@ nav a:hover,
 nav a:active {
   color: rgba(80, 80, 80, 1);
   font-weight: bold;
-  /*background-color: #fff;*/
 }
 
 
@@ -232,18 +243,18 @@ a#homeButton:hover {
 /* LANGUAGE LOGOS SECTION */
 
 .languages {
-  display: grid;
-  justify-items: center;
-  grid-template-columns: 20vw 20vw 20vw 20vw 20vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   padding: 10vh 0 10vh 0;
   background-color: #fff;
-  /*z-index: 2;*/
 }
 
 .language {
   width: 100%;
-  display: grid;
-  justify-items: center;
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 
@@ -268,27 +279,20 @@ a#homeButton:hover {
 #about {
   padding: 10vh 10vw 30vh 10vw;
   color: #fff;
-  display: grid;
-  align-content: center;
-  grid-template-rows: 3px auto 200px 20px;
-  grid-template-columns: 65% 35%;
-  grid-column-gap: 2%;
-  /*border-top: 3px solid rgb(0,128,128);*/
+  display: flex;
+  flex-direction: column;
 }
 
- .about h2,
- .portfolio h2, 
- .testimonials h2 {
-   font-family: 'Montserrat', sans-serif;
-   font-size: 90px;
-   grid-column-start: 1;
-   text-align: center;
- }
+.aboutInner {
+  display: flex;
+  justify-content: center;
+  aling-items: center;
+  flex-direction: row;
+  width: 80%;
+  margin: 0 auto;
+}
 
  .about h2 {
-  grid-column-end: 3;
-  grid-row-start: 2;
-  grid-row-end: 3;
   text-align: center;
   padding: 40px 0 0 0;
   border-top: 4px solid rgb(0,128,128);
@@ -296,35 +300,16 @@ a#homeButton:hover {
 }
 
 .about p {
-  padding: 0;
-  margin: 100px 10vw 0 10vw;
-  grid-column-start: 1;
-  grid-column-end: 2;
+  padding: 20px 30px 20px 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: auto;
   font-family: Helvetica, sans-serif;
   font-size: 18px;
   line-height: 1.4;
-  display: grid;
-  align-content: center;
   color: rgb(80,80,80);
-}
-
-.about p:nth-child(2) {
-  grid-row-start: 3;
-  grid-row-end: 4;
-}
-.about p:nth-child(3) {
-  grid-row-start: 4;
-  grid-row-end: 5;
-}
-
-.aboutImage {
-  /*width: 200px;*/
-  /*border-radius: 200px;*/
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 3;
-  grid-row-end: 5;
 }
 
 /*TESTIMONIALS SECTION*/
@@ -332,14 +317,9 @@ a#homeButton:hover {
 #testimonials {
   background-color: rgb(0,128,128);
   padding: 50px;
-  display: grid;
-  grid-template-columns: 33% 33% 33%;
 }
 
 .testimonials h2 {
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 2;
   text-align: center;
   color: #fff;
 }
@@ -363,17 +343,6 @@ a#homeButton:hover {
   margin: 20px;
 }
 
-.testimonial h3 {
-  color: rgb(0,128,128);
-  font-size: 30px;
-  margin-bottom: 5px;
-}
-
-.testimonial h4 {
-  color: rgb(0,128,128);
-  transition: color 0.8s ease-in-out;
-}
-
 .testimonial h4:hover {
   color: rgb(250, 208, 196);
 }
@@ -383,44 +352,46 @@ a#homeButton:hover {
 }
 
 .testimonial p {
-  /*text-align: justify;*/
-  /*background-color: rgb(0,128,128);*/
   color: #rgb(80,80,80);
   line-height: 1.3;
-  /*padding: 7px;*/
 }
 
 /* PORTFOLIO GRID SECTION */
 
 /*Portfolio redesign: */
 
-.portfolio {
-  padding: 0;
-  display: grid;
-  justify-items: center;
-  grid-template-columns: 33.33vw 33.33vw 33.33vw;
-  grid-template-rows: 200px 300px 300px 200px;
-  grid-row-gap: 10vh;
-  overflow: hidden;
+#portfolio {
+  padding: 0 0 80px 0;
+  display: flex;
+  flex-direction: column;
+  height: auto;
   background-color: #fff;
 }
 
 .portfolio h2 {
-  grid-column-end: 4;
   color: rgb(0,128,128);
   padding-top: 25px;
+}
+
+.portfolioWrapper {
+  width: 100%;
+  min-height: 700px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
 }
 
 .portfolioProject {
   padding-top: 0;
   width: 300px;
+  height: 300px;
+  margin: 20px 50px;
   box-sizing: border-box;
   position: relative;
-  align-items: baseline;
   box-shadow: 0px 0px #888888;
   transition: box-shadow ease-in-out 800ms;
 }
-
 
 .portfolioTitle {
   font-family: 'Montserrat', sans-serif;
@@ -428,12 +399,10 @@ a#homeButton:hover {
   height: 100%;
   margin-bottom: 0;
   position: absolute;
-  /*font-size: 30px;*/
   bottom: 0;
   right: 0;
   left: 0;
   opacity: 1;
-  /*background: rgba(0,128,128,0.7);*/
   background: rgba(80,80,80,0.9);
   color: #fff;
   transition: opacity ease-in-out 800ms;
@@ -446,6 +415,7 @@ a#homeButton:hover {
 
 .portfolioTitle h3 {
   font-size: 30px;
+  color: #fff;
 }
 
 .portfolioTitle p {
@@ -455,7 +425,6 @@ a#homeButton:hover {
 }
 
 .portfolioProject:hover .portfolioTitle {
-  /*height: 0;*/
   opacity: 0;
 }
 
@@ -475,11 +444,8 @@ a#homeButton:hover {
 /*CONTACT*/
 .contact {
   padding: 0;
-  /*height: 300px;*/
-  display: grid;
-  grid-template-columns: 33.33vw 33.33vw 33.33vw;
-  grid-template-rows: 60px 75px 25px;
-  justify-items: center;
+  display: flex;
+  flex-direction: column;
   background-color: #008080;
 }
 
@@ -504,7 +470,7 @@ a.contact-me {
   background-color: #fff;
   color: #008080;
   height: auto;
-  margin-top: 15px;
+  margin: 15px auto;
   padding: 15px;
   border-radius: 10px;
   text-decoration: none;
@@ -520,6 +486,16 @@ a.contact-me.button:hover,
 
 
 /* RESPONSIVE */
+
+@media (max-width: 1200px) {
+  .portfolioWrapper {
+    justify-content: center;
+  }
+
+  .portfolioProject {
+    margin: 20px 20px;
+  }
+}
 
 
 @media (max-width: 960px) {
@@ -540,12 +516,9 @@ a.contact-me.button:hover,
 
   #menu-icon {
     display: inline-block;
-    /*background-color: red;*/
   }
 
   #menu-icon.open {
-    /*background-color: yellow;*/
-    /*border: 3px solid yellow;*/
     transform: rotate(90deg);
   }
 
@@ -559,14 +532,11 @@ a.contact-me.button:hover,
     position: absolute;
     left: -400px;
     top: 50px;
-    /*border: 2px solid red;*/
     transition: left 1.5s;
   }
 
   #menu-icon.open + ul {
-        /*border: 2px dashed black;*/
     left: 0;    
-
   }
 
   nav li {
@@ -574,7 +544,6 @@ a.contact-me.button:hover,
     margin-left: 0;
     justify-content: center;
     align-items: center;
-    /*border: 2px solid yellow;*/
     background-color: rgba(255,255,255,0.5);
     padding: 0 0 0 0;
   }
@@ -585,7 +554,6 @@ a.contact-me.button:hover,
   }
 
   nav li a {
-    /*background-color: red;*/
     width: 100%;
     height: 100%;
     box-sizing: border-box;
@@ -597,34 +565,21 @@ a.contact-me.button:hover,
 
 
   .languages {
-    grid-template-columns: 33% 33% 33%;
-    grid-template-rows: 50% 50%;
+    flex-wrap: wrap;
   }
 
-  .about {
-    grid-template-rows: auto 220px 120px;
-    /*height: 450px;*/
-
+  .language {
+    width: 33%;
   }
 
-  .aboutImage {
-    width:150px;
-    border-radius: 150px;
+  .aboutInner {
+    flex-direction: column;
+  }
+
+  #about img {
+    width: 150px;
+    margin: 0 auto;
     margin-top: 10vh;
-  }
-
-   .portfolio {
-     grid-template-columns: 50vw 50vw;
-     grid-template-rows: 150px 300px 300px 300px 50px;
-   }
-
-   .portfolio h2 {
-     grid-column-end: 3;
-  }
-
-  .contact {
-    grid-template-columns: 100vw;
-    grid-template-rows: 20px auto 0px 0px 80px 80px;
   }
 
   .fa-circle {
@@ -634,32 +589,11 @@ a.contact-me.button:hover,
 
 @media (max-width: 639px) {  /*for portfolio projects - separate media query*/
 
-  #about {
-    grid-template-columns: 100%;
-    grid-template-rows: 3px auto 120px;
-  }
-
   #about img {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 3;
-    grid-row-end: 4;
     margin: 5vh auto;
   }
 
-  #about p {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 5;
-    grid-row-end: 6;
-  }
-
-  .portfolio {
-    grid-template-columns: 100vw;
-    grid-template-rows: 150px 300px 300px 300px 300px 300px 300px 50px;
-  }
   #testimonials {
-  grid-template-columns: 100vw;
   padding: 50px 0;
  }
 
@@ -669,9 +603,7 @@ a.contact-me.button:hover,
 
   .portfolio h2, 
   .testimonials h2 {
-    grid-column-end: 2;
  }
-
 
 }
 
@@ -682,7 +614,6 @@ a.contact-me.button:hover,
       rgba(250, 208, 196, 0.8),
       rgba(255, 209, 255, 0)
       );
-  /*height: 100vh;*/
 }
 
   h1 {
@@ -693,6 +624,11 @@ a.contact-me.button:hover,
 
   h1 span {
     display: block;
+  }
+
+  h2 {
+    font-size: 50px;
+    margin-top:20px;
   }
 
   .inner-header h2 {
@@ -710,32 +646,18 @@ a.contact-me.button:hover,
     margin-left: 0;
   }
 
-  .languages {
-    grid-template-columns: 100vw;
-    grid-template-rows: 18% 18% 18% 18% 18%;
-    row-gap: 20px;
+  .language {
+    width: 50%;
   }
 
-  .about {
-    /*height: 400px;*/
-    grid-template-rows: 80px 180px 150px;
-    grid-template-columns: 100vw;
+  .aboutInner {
+    width: 80vw;
   }
 
   .about p {
-    margin-left: 0;
-    width: 80vw;
+    padding: 10px;
+    font-size: 1rem;
     margin: 0 auto;
   }
 
-  .aboutImage{
-    display: none;
-  }
-
-  .about h2,
-  .portfolio h2, 
-  .testimonials h2 {
-    font-size: 50px;
-    margin-top:20px;
-  }
 }
